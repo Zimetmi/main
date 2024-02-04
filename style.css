@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #009688;
+}
+
+
+/* Таблица */
+.B {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.table_blur {
+  background: #f5ffff;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 1.07em;
+}
+.table_blur th {
+  border-top: 1px solid #777777;	
+  border-bottom: 1px solid #777777; 
+  box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+  background: linear-gradient(#9595b6, #5a567f);
+  color: white;
+  padding: 15px 20px;
+  position: relative;
+  text-align: center;
+}
+.table_blur th:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 25%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));
+}
+.table_blur tr:nth-child(odd) {
+  background: #ebf3f9;
+}
+.table_blur th:first-child {
+  border-left: 1px solid #777777;	
+  border-bottom:  1px solid #777777;
+  box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.table_blur th:last-child {
+  border-right: 1px solid #777777;
+  border-bottom:  1px solid #777777;
+  box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.table_blur td {
+  border: 1px solid #e3eef7;
+  padding: 15px 20px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+
+
+table {
+  margin-left: auto;
+  margin-right: auto; /* Выравниваем таблицу по центру окна  */
+}
+.head {
+   /*text-align: center;*/  /* Выравниваем шапку по центру окна  */
+    display: flex;
+    max-width: 100%;
+    width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    margin-left: auto;
+    margin-right: auto;
+    font: 20px/24px Helvetica;
+    text-align: center;
+}
+/*Шапка с видео*/
+#myVideo {
+   
+    right: 0;
+    bottom: 0;
+    width: 1060;
+    height: 425px;
+}
+
+
+/* СТИЛИ ДЛЯ ХЕДЕРА С МЕНЮ */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.header .navigation {
+  margin-top: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*Цвет хедера и тени от него. Так же внизу ещё есть цвет для адаптива. Поменяй его тоже.*/
+  background-color: #00796b;
+  box-shadow: 0 0 20px #00796b;
+  padding: 20px 20px 20px 20px;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 1100px) and (min-width: 900px) {
+  .navigation {
+    width: 100vh;
+  }
+}
+.navigation-brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 40px;
+}
+.navigation .navigation-mobile-collapse {
+  display: none;
+  background-color: #fff;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #5a5a5a;
+}
+.navigation .navigation-mobile-collapse span {
+  display: inline-block;
+  height: 2px;
+  width: 20px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -10px;
+}
+.navigation .navigation-mobile-collapse span:before, .navigation .navigation-mobile-collapse span:after {
+  content: "";
+  transition: transform 0.2s;
+  display: inline-block;
+  height: 2px;
+  width: 20px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -10px;
+}
+.navigation .navigation-mobile-collapse span:before {
+  transform: translateY(-6px);
+}
+.navigation .navigation-mobile-collapse span:after {
+  transform: translateY(6px);
+}
+.navigation .navigation-mobile-collapse_active.navigation-mobile-collapse span {
+  height: 0;
+}
+.navigation .navigation-mobile-collapse_active.navigation-mobile-collapse span:before {
+  transform: rotate(45deg);
+}
+.navigation .navigation-mobile-collapse_active.navigation-mobile-collapse span:after {
+  transform: rotate(-45deg);
+}
+.navigation .navigation-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.navigation .navigation-menu li {
+  margin-right: 50px;
+  position: relative;
+}
+.navigation .navigation-menu li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.navigation .navigation-menu li a:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #b2dfdb;
+  transform: translateY(26px) scale(0);
+  transition: transform 0.2s;
+}
+.navigation .navigation-menu li a:hover:after {
+  transform: translateY(36px) scale(1);
+}
+@media (max-width: 899px) {
+  .navigation .navigation-menu_show.navigation-menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 100%;
+	/*цвет поменять не забыть*/
+    background-color: #00796b;
+    margin-top: -20px;
+    margin-left: -20px;
+    padding-top: 20px;
+  }
+  .navigation .navigation-menu_show.navigation-menu li {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .navigation .navigation-menu_show.navigation-menu li a {
+    text-transform: none;
+  }
+  .navigation .navigation-menu_show.navigation-menu li a:after {
+    display: none;
+  }
+}
+@media (max-width: 899px) {
+  .navigation .navigation-mobile-collapse {
+    display: inline-block !important;
+  }
+  .navigation .navigation-menu {
+    display: none;
+  }
+  .navigation {
+    margin-top: 0 !important;
+    width: 100%;
+  }
+}
