@@ -111,9 +111,9 @@ table {
   width: 100%;
   position: relative;
 }
-@media (max-width: 1100px) and (min-width: 900px) {
+@media (max-width: 1400px) and (min-width: 1181px) {
   .navigation {
-    width: 100vh;
+    width: 100%;
   }
 }
 .navigation-brand {
@@ -197,7 +197,7 @@ table {
 .navigation .navigation-menu li a:hover:after {
   transform: translateY(36px) scale(1);
 }
-@media (max-width: 899px) {
+@media (max-width: 1180px) {
   .navigation .navigation-menu_show.navigation-menu {
     display: block;
     position: absolute;
@@ -221,7 +221,7 @@ table {
     display: none;
   }
 }
-@media (max-width: 899px) {
+@media (max-width: 1180px) {
   .navigation .navigation-mobile-collapse {
     display: inline-block !important;
   }
