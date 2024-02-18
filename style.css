@@ -19,41 +19,45 @@ src: url("Charming.otf") format("opentype");}
 
 
 /*тексты*/
+.text{
+  line-height:3vw;
+  position:absolute;
+  top: 5%;
+  left:10%;
+  width:clamp(800px, 40vw, 2000px);
+  height:clamp(600px, 25vw, 1080px);
+}
 .kanicoName{
   font-family: charm;
-  font-size: 4vw;
-  position: absolute;
-  top: 13%;
-  left: 10%;
-  color: white;}
+  font-size: 4em;
+  color: white;
+  height: 1em;
+
+}
   
 .name{
   font-family: night;
-  font-size: 15vw;
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  color: #bd083f;}
+  font-size: 15em;
+  color: #bd083f;
+  height: 0.9em;
+  display: flex;
+  align-items: center;
+}
   
 .date{
-  font-size: 3vw;
-  position: absolute  ;
-  top: 48%;
-  left: 10%;
-  color: #c7ccd0;}
+  font-size: 3em;
+  color: #c7ccd0;
+  height: 1em;
+  }
 
 .place{
-  font-size: 3vw;
-  position: absolute;
-  top: 55%;
-  left: 10%;
-  color: #c7ccd0;}
+  font-size: 3em;
+  color: #c7ccd0;
+  height: 1em;
+  }
   
 .time{
-  font-size: 2.5vw;
-  position: absolute;
-  top: 78%;
-  left: 10%;
+  font-size: 2.5em;
   color: #c7ccd0;}
   
   
@@ -61,15 +65,36 @@ src: url("Charming.otf") format("opentype");}
   
   
 /*Контейнеры*/
-.container .png {
-  width: 100vw;
-  height: auto;
-}
 .container{
   position: relative;
-  width: 50vw;
+  width: 50%;}
+  
+.container .png {
+  width: 100vw;
+  height: auto;}
+
+.muzhik{
+  position: fixed;
+  bottom: 0;
+  height:70%; 
+  width:auto;
+  right:5%;}
+  
+.tyan{
+  position: fixed;
+  bottom: 0;
+  height:70%;
+  width:auto;
+  right:-2%;}
+
+.frame{
+  position:relative;
+  margin-top:10vw;
+  width:clamp(800px, 40vw, 2000px);
+  height:clamp(300px, 8vw, 1080px);
 }
-.container .ticket {
+  
+/*.container .ticket {
   position: absolute;
   top: 85%;
   left: 10%;}
@@ -77,38 +102,23 @@ src: url("Charming.otf") format("opentype");}
 .container .cos {
   position: absolute;
   top: 85%;
-  left: 44%;}
-  
-.muzhik{
-  position: fixed;
-  bottom: 0;
-  height:30vw;
-  min-height:500px;
-  width:auto;
-  right:15%;
-}
-.tyan{
-  position: fixed;
-  bottom: 0;
-  height:30vw;
-  min-height:500px;
-  width:auto;
-  right:10%;
-  }
+  left: 44%;}*/
+
 
 
 
 /*кнопки*/
 .container .btn {
-  width: 15vw;
-  height: 4vw;
-  font-size: 1.5vw;
+  width: 9em;
+  height: 3em;
+  font-size: 1.5em;
   padding: 2%;
   border: 5px white;
   cursor: pointer;
   border-radius: 40px;
   background-color: rgba(255,255,255,0.2);
-  position: absolute;}
+  margin-top:0.5em;
+  margin-right:2em;}
   
 
 .container .btn:hover {
