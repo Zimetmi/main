@@ -1,5 +1,5 @@
 
-//Раскрытие картинок
+
 function openCity(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -25,11 +25,4 @@ function openCity(evt, cityName) {
 let text = document.querySelector('.time').textContent;
 console.log(text);
 
-
-//Адаптивный хедер
-$(".navigation-mobile-collapse").on("click", function (e) {
-  e.preventDefault();
-
-  $(this).toggleClass("navigation-mobile-collapse_active");
-  $(".navigation-menu").toggleClass("navigation-menu_show");
-});
+//Раскрытие картинок

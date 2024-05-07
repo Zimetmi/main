@@ -1,132 +1,55 @@
-body {
-  background-image: url("Background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin: 0;
-  font-family: Helvetica, sans-serif;
-  background-color:#495e66;}
+/*Карточки
+.card {box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s;}
+.card:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);}
+.container {padding: 2px 16px;}
+.card {box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; border-radius: 5px;}
+img {border-radius: 5px 5px 0 0;}
+*/
 
-@font-face {
-font-family: "night";
-src: url("nightmare.otf") format("opentype");
-}
-@font-face {
-font-family: "charm";
-src: url("Charming.otf") format("opentype");}
+/**/
 
+body {background-image: url("Background.jpg"); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; margin: 0; font-family: Helvetica, sans-serif; background-color:#495e66;}
 
+/* Таблица */
+.B {font-weight: bold; font-size: 1.1em; text-align: center;}
+.table_blur {background: #f5ffff; border-collapse: collapse; text-align: left; font-size: 1.07em;}
+.table_blur th {border-top: 1px solid #777777; border-bottom: 1px solid #777777; box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999; color: white; padding: 15px 20px; position: relative; text-align: center;}
+.table_blur th:after {content: ""; display: block; position: absolute; left: 0; top: 25%; height: 25%; width: 100%; background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));}
+.table_blur tr:nth-child(odd) {background: #ebf3f9;}
+.table_blur th:first-child { border-left: 1px solid #777777; border-bottom:  1px solid #777777; box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;}
+.table_blur th:last-child {border-right: 1px solid #777777; border-bottom:  1px solid #777777; box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;}
+.table_blur td {border: 1px solid #e3eef7; padding: 15px 20px; position: relative; transition: all 0.5s ease;}
+.smort{background: linear-gradient(#571508, #f06559);}
+.block{background: linear-gradient(#082254, #5c91f2);}
 
+/* Выравниваем таблицу по центру окна  */
+table {margin-left: auto; margin-right: auto;}
 
-/*тексты*/
-.text{
-  line-height:3vw;
-  position:absolute;
-  top: 5%;
-  left:10%;
-  width:clamp(800px, 40vw, 2000px);
-  height:clamp(600px, 25vw, 1080px);
-}
-.kanicoName{
-  font-family: charm;
-  font-size: 4em;
-  color: white;
-  height: 1em;
+/* Убираем подчёркивание  ссылок*/ 
+a {text-decoration: none; color: black;}
 
-}
-  
-.name{
-  font-family: night;
-  font-size: 15em;
-  color: #bd083f;
-  height: 0.9em;
-  display: flex;
-  align-items: center;
-}
-  
-.date{
-  font-size: 3em;
-  color: #c7ccd0;
-  height: 1em;
-  }
+/*Задник, фон*/
+@font-face {font-family: "night"; src: url("nightmare.otf") format("opentype");}
+@font-face {font-family: "charm"; src: url("Charming.otf") format("opentype");}
+/*Тексты*/
+.text{line-height:3vw; position:absolute; top: 5vw; left:7vw; width:clamp(700px, 40vw, 2000px); height:clamp(300px, 20vw, 1080px);}
+.kanicoName{font-family: charm; font-size: 4em; color: white; height: 1em;} 
+.name{font-family: night; font-size: 15em; color: #bd083f; height: 0.9em; display: flex; align-items: center;}
+.date{font-size: 3em; color: #c7ccd0; height: 1em;}
+.place{font-size: 3em; color: #c7ccd0; height: 1em;}
+.time{font-size: 2.5em; color: #c7ccd0;}
 
-.place{
-  font-size: 3em;
-  color: #c7ccd0;
-  height: 1em;
-  }
-  
-.time{
-  font-size: 2.5em;
-  color: #c7ccd0;}
-  
-  
-  
-  
-  
 /*Контейнеры*/
-.container{
-  position: relative;
-  width: 50%;}
-  
-.container .png {
-  width: 100vw;
-  height: auto;}
+.container{position: relative;}
+/*.container .png {width: 50px; height: 50px; border: solid;}*/
+.muzhik{position: fixed; bottom: 0; height:70%;  width:auto; right:5%;}
+.tyan{position: fixed;  bottom: 0; height:70%; width:auto; right:-2%;}
+.frame{position:relative; margin-top:10vw; width:clamp(800px, 40vw, 2000px); height:clamp(300px, 8vw, 1080px);}
 
-.muzhik{
-  position: fixed;
-  bottom: 0;
-  height:70%; 
-  width:auto;
-  right:5%;}
-  
-.tyan{
-  position: fixed;
-  bottom: 0;
-  height:70%;
-  width:auto;
-  right:-2%;}
+/*Таблицу делаем поверх картинок*/
+.tabcontent {position: relative;}
 
-.frame{
-  position:relative;
-  margin-top:10vw;
-  width:clamp(800px, 40vw, 2000px);
-  height:clamp(300px, 8vw, 1080px);
-}
-  
-/*.container .ticket {
-  position: absolute;
-  top: 85%;
-  left: 10%;}
- 
-.container .cos {
-  position: absolute;
-  top: 85%;
-  left: 44%;}*/
+h3 {color: white;}
 
+#red {margin-left: auto; margin-right: auto; background-color: rgba(255, 255, 255, 0.5);  max-width: 800px;}
 
-
-
-/*кнопки*/
-.container .btn {
-  width: 9em;
-  height: 3em;
-  font-size: 1.5em;
-  padding: 2%;
-  border: 5px white;
-  cursor: pointer;
-  border-radius: 40px;
-  background-color: rgba(255,255,255,0.2);
-  margin-top:0.5em;
-  margin-right:2em;}
-  
-
-.container .btn:hover {
- background-color: rgba(255,255,255);}
- 
-.container .btn span{
-  color: #c6ced1;
-  filter:opacity(100%);}
-
-.container .btn:hover span{
-	color: #2b2c2e;}
